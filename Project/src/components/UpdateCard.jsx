@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from 'react';
 export default function UpdateCard() {
     const token = localStorage.getItem('token')
     const navigate = useNavigate()
-    const { snackbar, setCards, setIsLoader } = useContext(MyContext);
+    const { snackbar, setIsLoader } = useContext(MyContext);
     const { id } = useParams();
     const [formData, setFormData] = useState({
         title: '',
@@ -42,10 +42,8 @@ export default function UpdateCard() {
             body: JSON.stringify(formData)
         });
         if (res.ok) {
-            // snackbar("הכתבה נשמרה בהצלחה");
-            alert("Successfuly updated")
-            navigate('/');
-            window.location.reload();
+            snackbar("Successfuly updated")
+            navigate('/mycards');
         } else {
             console.log(await res.text())
         }
