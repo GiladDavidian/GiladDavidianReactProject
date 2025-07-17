@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titlePage {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 100;
+    margin-top: 10px;
+}
+
+.cardsHR {
+    width: 90%;
+    border: none;
+    border-top: 3px solid rgb(115, 113, 113);
+    margin: 20px auto;
+    border-radius: 50%;
+}
+
+.containerCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+    align-items: flex-start;
+}
+
+.card {
+    background-color: var(--cardBg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 300px;
+    max-width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease-out;
+    position: relative;
+}
+
+.card:hover {
+    height: auto;
+    overflow: visible;
+    z-index: 10;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 200;
+}
+
+.card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h1 {
+    font-size: 1.8em;
+    color: var(--cardTxtH1);
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 1.2em;
+    color: var(--cardTxtH2);
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: var(--cardTxt);
+    margin-bottom: 10px;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::after {
+    opacity: 0;
+}
+
+.containerBtns {
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+    padding-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.containerDelete svg,
+.containerHeart svg,
+.containerEdit svg,
+.containerAboutCard svg {
+    fill: var(--icon);
+}
+
+.containerDelete,
+.containerHeart,
+.containerEdit,
+.containerAboutCard {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.delete,
+.heart,
+.fullHeart,
+.edit,
+.aboutCard {
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.delete:hover,
+.heart:hover,
+.fullHeart:hover,
+.edit:hover,
+.aboutCard:hover {
+    transform: scale(1.2);
+}
+
+.delete:active,
+.heart:active,
+.fullHeart:active,
+.edit:active,
+.aboutCard:active {
+    transform: scale(0.9);
+}
+
+.fullHeart {
+    color: red;
+    font-size: 1.5rem;
+    fill: red !important;
+}
+
+.addCard {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.8rem;
+    background-color: var(--headerBg);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.addCard:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 5px 15px rgba(11, 125, 232, 0.3);
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .card::after {
+        display: none;
+    }
+
+    .titlePage {
+        font-size: 3rem;
+    }
+}

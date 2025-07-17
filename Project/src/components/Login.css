@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.loginTitle {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.loginHR {
+    width: 350px;
+    border: none;
+    border-top: 3px solid black;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+
+.containerForm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.myForm {
+    width: 100%;
+    max-width: 380px;
+    background-color: var(--formBg);
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.myForm label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 0.5px;
+}
+
+.myForm input {
+    font-size: 1rem;
+    padding: 10px 12px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    background-color: #fcfdfe;
+    margin-top: 6px;
+    color: #34495e;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.myForm input:focus {
+    border-color: rgb(11, 125, 232);
+    box-shadow: 0 0 0 3px rgba(11, 125, 232, 0.1);
+    outline: none;
+}
+
+.btnLogin {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 25px;
+    background-color: rgb(11, 125, 232);
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btnLogin:hover {
+    background-color: rgb(9, 100, 185);
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+}
+
+.btnLogin:active {
+    background-color: rgb(7, 75, 138);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transform: translateY(0);
+}

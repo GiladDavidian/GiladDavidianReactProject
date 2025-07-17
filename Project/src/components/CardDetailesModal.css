@@ -1,0 +1,102 @@
+.MuiDialog-paper {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal-title {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.modal-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-business-name {
+    color: #0056b3;
+    font-size: 1.8em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.modal-subtitle {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.modal-description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.modal-detail {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 8px;
+    padding-left: 10px;
+    border-left: 3px solid #007bff;
+}
+
+.modal-detail strong {
+    color: #333;
+}
+
+.modal-map {
+    border: 1px solid #ddd !important;
+    border-radius: 8px;
+    margin-top: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.MuiDialogActions-root button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.MuiDialogActions-root button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .MuiDialog-paper {
+        padding: 15px;
+    }
+
+    .modal-title {
+        font-size: 1.8em;
+    }
+
+    .modal-business-name {
+        font-size: 1.5em;
+    }
+
+    .modal-subtitle {
+        font-size: 1em;
+    }
+
+    .modal-description,
+    .modal-detail {
+        font-size: 0.95em;
+    }
+}

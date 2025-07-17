@@ -1,0 +1,58 @@
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+.main-content-wrapper {
+    flex-grow: 1;
+    padding-bottom: 60px;
+}
+
+.myFooter {
+    height: 50px;
+    background-color: var(--footerBg, #f8f8f8);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.footerIcons {
+    font-size: 1.5rem;
+    color: rgb(118, 118, 118);
+    margin-bottom: 2px;
+}
+
+.footerBtns {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.footerLinkContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(118, 118, 118);
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.footerLinkContent:hover {
+    color: var(--text);
+}

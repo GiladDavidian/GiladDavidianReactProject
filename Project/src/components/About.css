@@ -1,0 +1,250 @@
+.about-container {
+    max-width: 900px;
+    /* רוחב מקסימלי כדי למנוע שהטקסט ימתח יותר מדי על מסכים רחבים */
+    margin: 40px auto;
+    /* ריווח מהצדדים ומרכוז העמוד */
+    padding: 30px;
+    /* ריפוד פנימי */
+    background-color: #ffffff;
+    /* רקע לבן למיכל הראשי */
+    border-radius: 12px;
+    /* פינות מעוגלות עדינות */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    /* צל עדין ומרשים */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* פונט נקי ומודרני */
+    line-height: 1.7;
+    /* רווח שורות נוח לקריאה */
+    color: #333333;
+    /* צבע טקסט ראשי */
+}
+
+/* כותרות ראשיות */
+.about-title {
+    font-size: 2.8rem;
+    /* גודל פונט גדול לכותרת ראשית */
+    color: #2c3e50;
+    /* צבע כהה יותר לכותרת */
+    text-align: center;
+    /* מרכוז הכותרת */
+    margin-bottom: 30px;
+    /* רווח מתחת לכותרת */
+    font-weight: 700;
+    /* עובי פונט מודגש */
+    letter-spacing: -0.02em;
+    /* רווח אותיות קטן לשפר קריאות */
+}
+
+/* כותרות משנה */
+.about-subtitle {
+    font-size: 2rem;
+    /* גודל פונט לכותרות משנה */
+    color: #34495e;
+    /* צבע כהה קצת יותר בהיר מהכותרת הראשית */
+    margin-top: 40px;
+    /* רווח גדול מעל כותרות משנה */
+    margin-bottom: 20px;
+    /* רווח מתחת לכותרות משנה */
+    position: relative;
+    /* עבור פס תחתון מעוצב */
+    padding-bottom: 10px;
+    /* רווח לפס תחתון */
+}
+
+.about-subtitle::after {
+    /* פס דקורטיבי מתחת לכותרות משנה */
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    /* אורך הפס */
+    height: 4px;
+    /* עובי הפס */
+    background-color: #3498db;
+    /* צבע כחול מודרני */
+    border-radius: 2px;
+}
+
+/* פיסקאות תיאור */
+.about-description {
+    font-size: 1.1rem;
+    /* גודל פונט נוח לקריאה */
+    margin-bottom: 25px;
+    /* רווח מתחת לפיסקה */
+    color: #555555;
+    /* צבע טקסט קצת יותר בהיר מהכותרות */
+}
+
+/* רשימות (ul) */
+.about-container ul {
+    list-style: none;
+    /* הסר נקודות ברירת מחדל */
+    padding: 0;
+    /* הסר ריפוד ברירת מחדל */
+    margin-bottom: 30px;
+    /* רווח מתחת לרשימה */
+}
+
+.about-container ul li {
+    background-color: #f8f9fa;
+    /* רקע עדין לפריטי רשימה */
+    border-left: 5px solid #3498db;
+    /* פס כחול בצד שמאל */
+    padding: 15px 20px;
+    /* ריפוד פנימי */
+    margin-bottom: 12px;
+    /* רווח בין פריטי רשימה */
+    border-radius: 8px;
+    /* פינות מעוגלות */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* צל קל */
+    transition: transform 0.3s ease-in-out;
+    /* אנימציית ריחוף */
+    font-size: 1.05rem;
+    color: #444444;
+}
+
+.about-container ul li:hover {
+    transform: translateY(-3px);
+    /* אפקט קל בריחוף */
+}
+
+/* רשימות מקוננות (לדוגמה, פרטי תצוגת הכרטיס) */
+.about-container ul ul {
+    margin-top: 15px;
+    /* רווח מעל רשימה מקוננת */
+    margin-left: 20px;
+    /* הזחה של רשימה מקוננת */
+    border-left: 2px dashed #bbdefb;
+    /* פס מקווקו עדין */
+    padding-left: 15px;
+}
+
+.about-container ul ul li {
+    background-color: transparent;
+    /* רקע שקוף לפריטים מקוננים */
+    border-left: none;
+    /* הסר פס צדדי */
+    box-shadow: none;
+    /* הסר צל */
+    padding: 8px 0;
+    /* ריפוד קטן יותר */
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.about-container ul ul li:hover {
+    transform: none;
+    /* בטל אנימציית ריחוף לפריטים מקוננים */
+    color: #3498db;
+    /* שנה צבע טקסט בריחוף */
+}
+
+/* קישורים */
+.about-link {
+    color: #3498db;
+    /* צבע כחול לקישורים */
+    text-decoration: none;
+    /* הסר קו תחתון */
+    font-weight: 600;
+    /* הדגשת הקישור */
+    transition: color 0.3s ease-in-out;
+    /* אנימציית שינוי צבע */
+}
+
+.about-link:hover {
+    color: #217dbb;
+    /* צבע כחול כהה יותר בריחוף */
+    text-decoration: underline;
+    /* הוסף קו תחתון בריחוף */
+}
+
+/* קווים מפרידים (---) - יוחלפו ב-hr מעוצב */
+/* מכיוון שהשתמשת ב-`---` ב-HTML, עדיף להחליף אותם בתגית <hr> אמיתית: */
+/* <hr class="about-divider" /> */
+.about-divider {
+    border: none;
+    border-top: 1px dashed #cccccc;
+    /* קו מפריד מקווקו */
+    margin: 40px 0;
+    /* רווח מעל ומתחת למפריד */
+    opacity: 0.7;
+    /* שקיפות עדינה */
+}
+
+/* קטע "Connect With Us" */
+.about-contact {
+    background-color: #e8f5fd;
+    /* רקע בהיר יותר */
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.about-contact .about-subtitle {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.about-contact .about-subtitle::after {
+    /* הסר את הפס התחתון מכותרת הקשר */
+    display: none;
+}
+
+.about-contact ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.about-contact ul li {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 8px 0;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: #444444;
+}
+
+.about-contact ul li .about-link {
+    font-weight: normal;
+    /* לא מודגש כמו קישורים אחרים */
+}
+
+/* רספונסיביות בסיסית */
+@media (max-width: 768px) {
+    .about-container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .about-title {
+        font-size: 2.2rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.7rem;
+    }
+
+    .about-description,
+    .about-container ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 15px;
+    }
+
+    .about-title {
+        font-size: 1.8rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.5rem;
+    }
+}
