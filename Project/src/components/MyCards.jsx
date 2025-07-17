@@ -41,8 +41,18 @@ export default function MyCards({ user, searchTerm }) {
 
             if (res.ok) {
                 const responseData = await res.json();
-                snackbar('You liked!')
+                const userId = user._id
+                const isLiked = responseData.likes.includes(userId)
+                isLiked ? snackbar('You liked!') : snackbar('You Unliked!')
                 setCards(prevCards =>
+                    prevCards.map(card =>
+                        card._id === id
+                            ? { ...card, likes: responseData.likes || card.likes }
+                            : card
+                    )
+                );
+
+                setMyCards(prevCards =>
                     prevCards.map(card =>
                         card._id === id
                             ? { ...card, likes: responseData.likes || card.likes }
