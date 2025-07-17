@@ -43,7 +43,7 @@ export default function UpdateCard() {
         });
         if (res.ok) {
             snackbar("Successfuly updated")
-            navigate('/mycards');
+            navigate('/');
         } else {
             console.log(await res.text())
         }
