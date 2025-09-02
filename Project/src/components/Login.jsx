@@ -37,7 +37,7 @@ export default function Login() {
         ev.preventDefault();
         setIsLoader(true)
 
-        const res = await fetch(`https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users/login`, {
+        const res = await fetch(`https://bcard-ojqa.onrender.com/users/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -48,7 +48,6 @@ export default function Login() {
         if (res.ok) {
             const token = await res.text();
             const data = jwtDecode(token);
-            console.log(data)
             localStorage.setItem('token', token)
             navigate('/');
             snackbar('You connected!');

@@ -86,7 +86,7 @@ export default function Signup() {
         }
 
         try {
-            const res = await fetch('https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users', {
+            const res = await fetch('https://bcard-ojqa.onrender.com/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

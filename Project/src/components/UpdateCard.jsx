@@ -54,7 +54,7 @@ export default function UpdateCard() {
         ev.preventDefault();
         setIsLoader(true)
 
-        const res = await fetch(`https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards/${id}`, {
+        const res = await fetch(`https://bcard-ojqa.onrender.com/cards/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ export default function UpdateCard() {
     const getCard = async id => {
         setIsLoader(true);
 
-        const res = await fetch(`https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards/${id}`);
+        const res = await fetch(`https://bcard-ojqa.onrender.com/cards/${id}`);
 
         if (res.ok) {
             const data = await res.json();

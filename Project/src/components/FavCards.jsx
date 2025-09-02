@@ -16,7 +16,7 @@ export default function FavCards({ currentUserId, cards, user, searchTerm }) {
 
     const like = async id => {
         try {
-            const res = await fetch(`https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards/${id}`, {
+            const res = await fetch(`https://bcard-ojqa.onrender.com/cards/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ export default function FavCards({ currentUserId, cards, user, searchTerm }) {
     };
 
     const deleteCrad = async id => {
-        const resDelete = await fetch(`https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards/${id}`, {
+        const resDelete = await fetch(`https://bcard-ojqa.onrender.com/cards/${id}`, {
             method: 'DELETE',
             headers: {
                 'x-auth-token': token

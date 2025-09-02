@@ -79,7 +79,7 @@ export default function AddCard() {
 
         setIsLoader(true);
         try {
-            const res = await fetch(`https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards`, {
+            const res = await fetch(`https://bcard-ojqa.onrender.com/cards`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

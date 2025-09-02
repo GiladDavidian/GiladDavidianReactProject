@@ -27,7 +27,7 @@ function App() {
 
   const getCardsData = async () => {
     setIsLoader(true);
-    const res = await fetch(`https://monkfish-app-z9uza.ondigitalocean.app/bcard2/cards`);
+    const res = await fetch(`https://bcard-ojqa.onrender.com/cards`);
 
     if (res.ok) {
       const data = await res.json();
